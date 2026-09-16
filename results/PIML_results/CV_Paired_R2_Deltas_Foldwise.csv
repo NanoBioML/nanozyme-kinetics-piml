@@ -1,0 +1,76 @@
+comparison,base_model,enhanced_model,fold,target,delta_R2
+M3_minus_M1_engineered_representation,M1_raw_independent,M3_physics_independent,1,Km (mM),0.22804163610343775
+M3_minus_M1_engineered_representation,M1_raw_independent,M3_physics_independent,1,Kcat (s⁻¹),0.033109634625576145
+M3_minus_M1_engineered_representation,M1_raw_independent,M3_physics_independent,1,Vmax (nM s⁻¹),0.522471832211697
+M3_minus_M1_engineered_representation,M1_raw_independent,M3_physics_independent,2,Km (mM),0.5757798896604377
+M3_minus_M1_engineered_representation,M1_raw_independent,M3_physics_independent,2,Kcat (s⁻¹),0.019005634441564223
+M3_minus_M1_engineered_representation,M1_raw_independent,M3_physics_independent,2,Vmax (nM s⁻¹),0.2529781952780946
+M3_minus_M1_engineered_representation,M1_raw_independent,M3_physics_independent,3,Km (mM),1.0692586035525147
+M3_minus_M1_engineered_representation,M1_raw_independent,M3_physics_independent,3,Kcat (s⁻¹),0.12675607235411812
+M3_minus_M1_engineered_representation,M1_raw_independent,M3_physics_independent,3,Vmax (nM s⁻¹),0.1077406807537814
+M3_minus_M1_engineered_representation,M1_raw_independent,M3_physics_independent,4,Km (mM),0.7882322459782424
+M3_minus_M1_engineered_representation,M1_raw_independent,M3_physics_independent,4,Kcat (s⁻¹),-0.035785546506527544
+M3_minus_M1_engineered_representation,M1_raw_independent,M3_physics_independent,4,Vmax (nM s⁻¹),0.19244496751506435
+M3_minus_M1_engineered_representation,M1_raw_independent,M3_physics_independent,5,Km (mM),-0.02427673091454219
+M3_minus_M1_engineered_representation,M1_raw_independent,M3_physics_independent,5,Kcat (s⁻¹),0.1717690807641168
+M3_minus_M1_engineered_representation,M1_raw_independent,M3_physics_independent,5,Vmax (nM s⁻¹),0.06645261185714213
+M4_minus_M3_chain,M3_physics_independent,M4_full_physics_chain,1,Km (mM),0.0
+M4_minus_M3_chain,M3_physics_independent,M4_full_physics_chain,1,Kcat (s⁻¹),-0.0029662776735270846
+M4_minus_M3_chain,M3_physics_independent,M4_full_physics_chain,1,Vmax (nM s⁻¹),0.014455076228863883
+M4_minus_M3_chain,M3_physics_independent,M4_full_physics_chain,2,Km (mM),0.0
+M4_minus_M3_chain,M3_physics_independent,M4_full_physics_chain,2,Kcat (s⁻¹),0.05080084083857339
+M4_minus_M3_chain,M3_physics_independent,M4_full_physics_chain,2,Vmax (nM s⁻¹),-0.05433995790332047
+M4_minus_M3_chain,M3_physics_independent,M4_full_physics_chain,3,Km (mM),0.0
+M4_minus_M3_chain,M3_physics_independent,M4_full_physics_chain,3,Kcat (s⁻¹),-0.0031511791348558527
+M4_minus_M3_chain,M3_physics_independent,M4_full_physics_chain,3,Vmax (nM s⁻¹),-0.012563276313693583
+M4_minus_M3_chain,M3_physics_independent,M4_full_physics_chain,4,Km (mM),0.0
+M4_minus_M3_chain,M3_physics_independent,M4_full_physics_chain,4,Kcat (s⁻¹),-0.03107796372210958
+M4_minus_M3_chain,M3_physics_independent,M4_full_physics_chain,4,Vmax (nM s⁻¹),-0.021722005037074887
+M4_minus_M3_chain,M3_physics_independent,M4_full_physics_chain,5,Km (mM),2.220446049250313e-16
+M4_minus_M3_chain,M3_physics_independent,M4_full_physics_chain,5,Kcat (s⁻¹),-0.04211599481187622
+M4_minus_M3_chain,M3_physics_independent,M4_full_physics_chain,5,Vmax (nM s⁻¹),0.11482427625378089
+A1_minus_A0_activity_category,A0_physics_no_arrhenius,A1_physics_plus_activity_category,1,Km (mM),0.13825656792946162
+A1_minus_A0_activity_category,A0_physics_no_arrhenius,A1_physics_plus_activity_category,1,Kcat (s⁻¹),-0.06916405868250286
+A1_minus_A0_activity_category,A0_physics_no_arrhenius,A1_physics_plus_activity_category,1,Vmax (nM s⁻¹),0.22762070721430205
+A1_minus_A0_activity_category,A0_physics_no_arrhenius,A1_physics_plus_activity_category,2,Km (mM),0.9080299146239137
+A1_minus_A0_activity_category,A0_physics_no_arrhenius,A1_physics_plus_activity_category,2,Kcat (s⁻¹),-0.06436896838150008
+A1_minus_A0_activity_category,A0_physics_no_arrhenius,A1_physics_plus_activity_category,2,Vmax (nM s⁻¹),0.1571538139430806
+A1_minus_A0_activity_category,A0_physics_no_arrhenius,A1_physics_plus_activity_category,3,Km (mM),1.1705475490443495
+A1_minus_A0_activity_category,A0_physics_no_arrhenius,A1_physics_plus_activity_category,3,Kcat (s⁻¹),0.1172358473534203
+A1_minus_A0_activity_category,A0_physics_no_arrhenius,A1_physics_plus_activity_category,3,Vmax (nM s⁻¹),-0.15587473271743046
+A1_minus_A0_activity_category,A0_physics_no_arrhenius,A1_physics_plus_activity_category,4,Km (mM),0.8791367249946349
+A1_minus_A0_activity_category,A0_physics_no_arrhenius,A1_physics_plus_activity_category,4,Kcat (s⁻¹),-0.13873057288266077
+A1_minus_A0_activity_category,A0_physics_no_arrhenius,A1_physics_plus_activity_category,4,Vmax (nM s⁻¹),0.1468785710654834
+A1_minus_A0_activity_category,A0_physics_no_arrhenius,A1_physics_plus_activity_category,5,Km (mM),0.8934318435551829
+A1_minus_A0_activity_category,A0_physics_no_arrhenius,A1_physics_plus_activity_category,5,Kcat (s⁻¹),-0.11333221748349198
+A1_minus_A0_activity_category,A0_physics_no_arrhenius,A1_physics_plus_activity_category,5,Vmax (nM s⁻¹),0.3990899453245159
+A2_minus_A0_arrhenius,A0_physics_no_arrhenius,A2_physics_plus_arrhenius,1,Km (mM),0.18991995864625444
+A2_minus_A0_arrhenius,A0_physics_no_arrhenius,A2_physics_plus_arrhenius,1,Kcat (s⁻¹),-0.021638843652938444
+A2_minus_A0_arrhenius,A0_physics_no_arrhenius,A2_physics_plus_arrhenius,1,Vmax (nM s⁻¹),0.17578718687084927
+A2_minus_A0_arrhenius,A0_physics_no_arrhenius,A2_physics_plus_arrhenius,2,Km (mM),0.6394015486059376
+A2_minus_A0_arrhenius,A0_physics_no_arrhenius,A2_physics_plus_arrhenius,2,Kcat (s⁻¹),0.017753463516705037
+A2_minus_A0_arrhenius,A0_physics_no_arrhenius,A2_physics_plus_arrhenius,2,Vmax (nM s⁻¹),0.1464047713061356
+A2_minus_A0_arrhenius,A0_physics_no_arrhenius,A2_physics_plus_arrhenius,3,Km (mM),1.05739578176152
+A2_minus_A0_arrhenius,A0_physics_no_arrhenius,A2_physics_plus_arrhenius,3,Kcat (s⁻¹),0.0871638318423027
+A2_minus_A0_arrhenius,A0_physics_no_arrhenius,A2_physics_plus_arrhenius,3,Vmax (nM s⁻¹),-0.10456000321518288
+A2_minus_A0_arrhenius,A0_physics_no_arrhenius,A2_physics_plus_arrhenius,4,Km (mM),0.8471958760651764
+A2_minus_A0_arrhenius,A0_physics_no_arrhenius,A2_physics_plus_arrhenius,4,Kcat (s⁻¹),-0.09070098237921032
+A2_minus_A0_arrhenius,A0_physics_no_arrhenius,A2_physics_plus_arrhenius,4,Vmax (nM s⁻¹),0.0865913029569717
+A2_minus_A0_arrhenius,A0_physics_no_arrhenius,A2_physics_plus_arrhenius,5,Km (mM),0.011943737059401549
+A2_minus_A0_arrhenius,A0_physics_no_arrhenius,A2_physics_plus_arrhenius,5,Kcat (s⁻¹),-0.05590589474577701
+A2_minus_A0_arrhenius,A0_physics_no_arrhenius,A2_physics_plus_arrhenius,5,Vmax (nM s⁻¹),0.26024731141654445
+A3_minus_A1_arrhenius_beyond_activity,A1_physics_plus_activity_category,A3_physics_plus_activity_and_arrhenius,1,Km (mM),0.0009091121680284697
+A3_minus_A1_arrhenius_beyond_activity,A1_physics_plus_activity_category,A3_physics_plus_activity_and_arrhenius,1,Kcat (s⁻¹),-0.031106838331469544
+A3_minus_A1_arrhenius_beyond_activity,A1_physics_plus_activity_category,A3_physics_plus_activity_and_arrhenius,1,Vmax (nM s⁻¹),-0.013367032150836122
+A3_minus_A1_arrhenius_beyond_activity,A1_physics_plus_activity_category,A3_physics_plus_activity_and_arrhenius,2,Km (mM),0.0035975001913972626
+A3_minus_A1_arrhenius_beyond_activity,A1_physics_plus_activity_category,A3_physics_plus_activity_and_arrhenius,2,Kcat (s⁻¹),-0.006505365307635458
+A3_minus_A1_arrhenius_beyond_activity,A1_physics_plus_activity_category,A3_physics_plus_activity_and_arrhenius,2,Vmax (nM s⁻¹),0.0203753738359832
+A3_minus_A1_arrhenius_beyond_activity,A1_physics_plus_activity_category,A3_physics_plus_activity_and_arrhenius,3,Km (mM),0.06055636090260619
+A3_minus_A1_arrhenius_beyond_activity,A1_physics_plus_activity_category,A3_physics_plus_activity_and_arrhenius,3,Kcat (s⁻¹),-0.00662967703036188
+A3_minus_A1_arrhenius_beyond_activity,A1_physics_plus_activity_category,A3_physics_plus_activity_and_arrhenius,3,Vmax (nM s⁻¹),-0.043106212333693494
+A3_minus_A1_arrhenius_beyond_activity,A1_physics_plus_activity_category,A3_physics_plus_activity_and_arrhenius,4,Km (mM),0.00404551828247246
+A3_minus_A1_arrhenius_beyond_activity,A1_physics_plus_activity_category,A3_physics_plus_activity_and_arrhenius,4,Kcat (s⁻¹),-0.01812079399354738
+A3_minus_A1_arrhenius_beyond_activity,A1_physics_plus_activity_category,A3_physics_plus_activity_and_arrhenius,4,Vmax (nM s⁻¹),-0.02458741074755244
+A3_minus_A1_arrhenius_beyond_activity,A1_physics_plus_activity_category,A3_physics_plus_activity_and_arrhenius,5,Km (mM),0.024767192616116596
+A3_minus_A1_arrhenius_beyond_activity,A1_physics_plus_activity_category,A3_physics_plus_activity_and_arrhenius,5,Kcat (s⁻¹),-0.013899010427660174
+A3_minus_A1_arrhenius_beyond_activity,A1_physics_plus_activity_category,A3_physics_plus_activity_and_arrhenius,5,Vmax (nM s⁻¹),-0.005598146143245164

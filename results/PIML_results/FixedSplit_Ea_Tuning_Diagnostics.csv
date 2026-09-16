@@ -1,0 +1,4 @@
+activity,Ea_eV,inner_cv_R2,n_training_records,n_training_groups,inner_cv_kind,inner_cv_splits,used_default_Ea,selection_reason
+catalase,0.7999999999999999,0.041467772991951736,33,,KFold,3,False,grid_search_best_inner_cv_R2
+peroxidase,0.1,-0.24636010888418491,28,,KFold,3,False,grid_search_best_inner_cv_R2
+unknown,0.4,,7,,,0,True,fewer_than_10_training_records

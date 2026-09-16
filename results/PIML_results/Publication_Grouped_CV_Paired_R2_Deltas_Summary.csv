@@ -1,0 +1,16 @@
+comparison,target,n_folds,mean_delta_R2,std_delta_R2
+M3_minus_M1_engineered_representation,Km (mM),5,0.5785568806310415,0.4030426851757813
+M3_minus_M1_engineered_representation,Kcat (s⁻¹),5,-0.0435651600575306,0.24120253573118336
+M3_minus_M1_engineered_representation,Vmax (nM s⁻¹),5,2.1839063795707347,3.670342830136302
+M4_minus_M3_chain,Km (mM),5,-2.2204460492503132e-17,4.4408920985006264e-17
+M4_minus_M3_chain,Kcat (s⁻¹),5,-0.025255244669353562,0.15621668707748618
+M4_minus_M3_chain,Vmax (nM s⁻¹),5,-0.15301308421236684,0.8230739781856998
+A1_minus_A0_activity_category,Km (mM),5,0.3464566827095516,0.47400440849916203
+A1_minus_A0_activity_category,Kcat (s⁻¹),5,0.13401438025186715,0.17107021993056723
+A1_minus_A0_activity_category,Vmax (nM s⁻¹),5,0.7294717655255436,0.833551294151167
+A2_minus_A0_arrhenius,Km (mM),5,0.36089486269641724,0.2190051053367843
+A2_minus_A0_arrhenius,Kcat (s⁻¹),5,0.09431925964808445,0.09163259482781926
+A2_minus_A0_arrhenius,Vmax (nM s⁻¹),5,-0.3268239157448853,1.416853296241295
+A3_minus_A1_arrhenius_beyond_activity,Km (mM),5,-0.050727485922717516,0.062406899646283355
+A3_minus_A1_arrhenius_beyond_activity,Kcat (s⁻¹),5,0.013488944057257913,0.08857487679178269
+A3_minus_A1_arrhenius_beyond_activity,Vmax (nM s⁻¹),5,0.011201598624132437,0.15089255758851527

@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software or dataset, please cite this repository and the associated manuscript."
+title: "Nanozyme Kinetics PIML: Physics-Motivated Multi-Output Machine Learning with Publication-Aware Validation"
+type: software
+authors:
+  - family-names: Zhakupov
+    given-names: Daniel
+repository-code: "https://github.com/NanoBioML/nanozyme-kinetics-piml"
+url: "https://github.com/NanoBioML/nanozyme-kinetics-piml"
+license: MIT
+version: 1.0.0
+date-released: 2026-09-16
+keywords:
+  - nanozyme
+  - machine learning
+  - kinetics
+  - publication-aware validation
+  - GroupKFold
+  - physics-motivated features
