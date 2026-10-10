@@ -1,0 +1,28 @@
+reference_model,model,target,mean_delta_reference_minus_model_R2,std_delta_reference_minus_model_R2,n_folds
+FG_full_all,FG_conditions_only_raw,Km (mM),0.01037533017137795,0.6957405406208336,5
+FG_full_all,FG_conditions_only_raw,Kcat (s⁻¹),0.6078501652245524,1.4971223396345528,5
+FG_full_all,FG_conditions_only_raw,Vmax (nM s⁻¹),-2.9814569423422017,4.989077321637407,5
+FG_full_all,FG_material_only,Km (mM),0.6551509256523314,0.6516773194862623,5
+FG_full_all,FG_material_only,Kcat (s⁻¹),0.7609586466123958,1.7997548848051435,5
+FG_full_all,FG_material_only,Vmax (nM s⁻¹),0.37636276826019077,7.149497829095638,5
+FG_full_all,FG_conditions_plus_material_raw,Km (mM),0.5790979851771454,0.45009583113467844,5
+FG_full_all,FG_conditions_plus_material_raw,Kcat (s⁻¹),-0.06656633488353211,0.2630924779336065,5
+FG_full_all,FG_conditions_plus_material_raw,Vmax (nM s⁻¹),0.26778315135819053,4.453589391553786,5
+FG_full_all,FG_pH_family_only,Km (mM),0.010640921222040212,0.876994582939699,5
+FG_full_all,FG_pH_family_only,Kcat (s⁻¹),0.619209116322289,1.765512482631457,5
+FG_full_all,FG_pH_family_only,Vmax (nM s⁻¹),-2.9435566784284015,6.049654819041512,5
+FG_full_all,FG_temperature_family_plus_arrhenius,Km (mM),0.14798850551508277,0.2315876293565417,5
+FG_full_all,FG_temperature_family_plus_arrhenius,Kcat (s⁻¹),0.2072462261518762,0.9090119816457797,5
+FG_full_all,FG_temperature_family_plus_arrhenius,Vmax (nM s⁻¹),-2.1371484999382937,4.633873077516699,5
+FG_full_all,FG_full_no_engineered_pH,Km (mM),0.2608501373388822,0.44489631535665075,5
+FG_full_all,FG_full_no_engineered_pH,Kcat (s⁻¹),-0.22331050032202637,0.4442725925718245,5
+FG_full_all,FG_full_no_engineered_pH,Vmax (nM s⁻¹),0.38103937136339294,1.2118481472513127,5
+FG_full_all,FG_full_no_all_pH,Km (mM),0.45864990605904543,0.696835181242701,5
+FG_full_all,FG_full_no_all_pH,Kcat (s⁻¹),0.03965662930201641,0.36898256210635955,5
+FG_full_all,FG_full_no_all_pH,Vmax (nM s⁻¹),-0.019758538611782405,0.5342428527343325,5
+FG_full_all,FG_full_no_material,Km (mM),-0.24870074604574272,0.5371777461095495,5
+FG_full_all,FG_full_no_material,Kcat (s⁻¹),0.5776150035613974,1.277379960244484,5
+FG_full_all,FG_full_no_material,Vmax (nM s⁻¹),-1.86449189098552,4.7053807230939935,5
+FG_full_all,FG_full_no_engineered_temperature,Km (mM),0.41784733744624747,0.2751682070018726,5
+FG_full_all,FG_full_no_engineered_temperature,Kcat (s⁻¹),0.19475894852869008,0.5527323712063466,5
+FG_full_all,FG_full_no_engineered_temperature,Vmax (nM s⁻¹),-0.012244557130444011,3.3043830055507857,5

@@ -1,0 +1,25 @@
+reference_model,model,target,mean_delta_reference_minus_model_R2,std_delta_reference_minus_model_R2,n_folds
+Proposed_ExtraTrees_RegressorChain_physics,Ridge_base,Km (mM),0.4859843510558431,0.3565900582479801,5
+Proposed_ExtraTrees_RegressorChain_physics,Ridge_base,Kcat (s⁻¹),0.25630489027640524,0.07483497678581964,5
+Proposed_ExtraTrees_RegressorChain_physics,Ridge_base,Vmax (nM s⁻¹),0.48372105917342856,0.20171784179685948,5
+Proposed_ExtraTrees_RegressorChain_physics,RandomForest_base,Km (mM),0.5172018475874738,0.36386348804691754,5
+Proposed_ExtraTrees_RegressorChain_physics,RandomForest_base,Kcat (s⁻¹),-0.060177277167059874,0.07078741301380419,5
+Proposed_ExtraTrees_RegressorChain_physics,RandomForest_base,Vmax (nM s⁻¹),0.11277095307251225,0.16152599768131845,5
+Proposed_ExtraTrees_RegressorChain_physics,HistGradientBoosting_base,Km (mM),0.4865486498894313,0.3987233747461659,5
+Proposed_ExtraTrees_RegressorChain_physics,HistGradientBoosting_base,Kcat (s⁻¹),0.20515089983121895,0.10468659205028633,5
+Proposed_ExtraTrees_RegressorChain_physics,HistGradientBoosting_base,Vmax (nM s⁻¹),0.35112490101247606,0.08152390435706074,5
+Proposed_ExtraTrees_RegressorChain_physics,ExtraTrees_base,Km (mM),0.5282043924999683,0.4354152721064473,5
+Proposed_ExtraTrees_RegressorChain_physics,ExtraTrees_base,Kcat (s⁻¹),0.05741374684870835,0.08056109589864474,5
+Proposed_ExtraTrees_RegressorChain_physics,ExtraTrees_base,Vmax (nM s⁻¹),0.23636008956105936,0.17256176036243331,5
+Proposed_ExtraTrees_RegressorChain_physics,Ridge_physics,Km (mM),0.3342742301243814,0.3131448806217629,5
+Proposed_ExtraTrees_RegressorChain_physics,Ridge_physics,Kcat (s⁻¹),0.23579168145787435,0.22541204205556675,5
+Proposed_ExtraTrees_RegressorChain_physics,Ridge_physics,Vmax (nM s⁻¹),0.27614220640089393,0.2007050653688188,5
+Proposed_ExtraTrees_RegressorChain_physics,RandomForest_physics,Km (mM),0.01804321772122284,0.06195579520583336,5
+Proposed_ExtraTrees_RegressorChain_physics,RandomForest_physics,Kcat (s⁻¹),-0.07344385144335001,0.05594042666953521,5
+Proposed_ExtraTrees_RegressorChain_physics,RandomForest_physics,Vmax (nM s⁻¹),-0.009851723832264602,0.13993447626932684,5
+Proposed_ExtraTrees_RegressorChain_physics,HistGradientBoosting_physics,Km (mM),-0.034510396171800385,0.47856107573307277,5
+Proposed_ExtraTrees_RegressorChain_physics,HistGradientBoosting_physics,Kcat (s⁻¹),0.075741841867908,0.09743887862828486,5
+Proposed_ExtraTrees_RegressorChain_physics,HistGradientBoosting_physics,Vmax (nM s⁻¹),0.1240039516715045,0.14281478102351494,5
+Proposed_ExtraTrees_RegressorChain_physics,ExtraTrees_physics_independent,Km (mM),2.2204460492503132e-17,4.965068306494546e-17,5
+Proposed_ExtraTrees_RegressorChain_physics,ExtraTrees_physics_independent,Kcat (s⁻¹),-0.00596082036046437,0.03546703673267292,5
+Proposed_ExtraTrees_RegressorChain_physics,ExtraTrees_physics_independent,Vmax (nM s⁻¹),0.007907489757025377,0.06478047555277454,5

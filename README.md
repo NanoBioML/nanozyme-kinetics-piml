@@ -1,22 +1,75 @@
-# Nanozyme Kinetics PIML
+# Nanozyme Kinetics — Physics-Motivated ML
 
-Companion repository for the manuscript **“A Physics-Motivated Multi-Output Machine Learning Framework for Predicting Nanozyme Kinetic Parameters: Proof-of-Concept on a Curated Dataset.”**
+Companion repository for the manuscript **“Physics-Motivated Multi-Output Machine Learning for Nanozyme Kinetics: Predictive Utility and Limits of Cross-Publication Transfer.”**
 
-This repository contains the frozen analysis code, DOI-annotated 86-record dataset, manuscript figures, and supplementary validation tables used in the revised study.
+This project studies how far machine learning can go on a **small, heterogeneous, literature-derived nanozyme kinetic dataset**, and where apparent predictive performance breaks down when validation is separated by publication source.
 
-## What this repository demonstrates
+The repository contains the frozen 86-record dataset, publication provenance, leakage-controlled modeling code, publication-aware validation, reviewer-driven benchmark analyses, ablations, manuscript figures, and machine-readable result tables.
 
-The study evaluates a small-data, physics-motivated machine-learning pipeline for predicting three nanozyme kinetic parameters: **Km**, **kcat**, and **Vmax**.
+## Research question
 
-The central methodological result is that conventional shuffled cross-validation gives materially more optimistic estimates than publication-aware validation on this curated literature dataset. The final analysis therefore distinguishes:
+Can low-dimensional, physics-motivated descriptors improve prediction of **Km**, **kcat**, and **Vmax** from sparse literature-derived nanozyme data, and do those gains transfer across independent publication sources?
 
-- **within-dataset predictive utility** — leakage-controlled random 5-fold CV;
-- **cross-publication transfer** — 5-fold `GroupKFold` using reconstructed publication/source identifiers;
-- **pooled out-of-fold (OOF) performance** — one strictly out-of-publication prediction per record.
+The final study distinguishes:
 
-For the frozen 86-record cohort, the full model obtained random-CV R² values of approximately **0.345 (Km), 0.465 (kcat), and 0.321 (Vmax)**. Publication-grouped pooled OOF R² values were approximately **0.074, -0.014, and -0.803**, respectively. These results indicate useful structure within the curated dataset but limited transfer to unseen studies.
+- **within-dataset predictive utility** — shuffled leakage-controlled 5-fold CV;
+- **cross-publication transfer** — 5-fold `GroupKFold` using reconstructed publication/source identifiers.
 
-The ablation analysis also shows that the engineered representation contributes most strongly for Km, RegressorChain adds little incremental value, and the Arrhenius descriptor provides little additional predictive benefit once catalytic activity class is encoded explicitly.
+## Dataset
+
+The frozen analytical cohort contains:
+
+- **86 complete kinetic records**
+- **23 reconstructed publication groups**
+- targets: **Km, kcat, Vmax**
+- experimental descriptors: pH and temperature
+- coarse material descriptors: electronegativity and redox potential
+- publication provenance for source-aware validation
+
+The data were curated from NanozymeDB and the cited source publications. The software is MIT-licensed; the curated dataset is **not relicensed under MIT**.
+
+## Modeling and engineering
+
+The reference model uses **ExtraTreesRegressor + RegressorChain** with the prespecified target order:
+
+`Km → kcat → Vmax`
+
+The pipeline includes train-only target winsorization, median imputation, robust scaling, physics-motivated feature engineering, activity-dependent Arrhenius transformation, publication-aware `GroupKFold`, pooled OOF prediction export, deterministic leakage checks, paired ablations, conventional-model benchmarking, and feature-group ablation.
+
+The former Vmax post-processing clamp is **not used for primary predictions**; it is retained only as a labeled sensitivity diagnostic.
+
+## Final predictive results
+
+| Target | Shuffled 5-fold R² mean ± SD | Publication-grouped pooled OOF R² |
+|---|---:|---:|
+| Km | **0.345 ± 0.363** | **0.074** |
+| kcat | **0.465 ± 0.106** | **−0.014** |
+| Vmax | **0.321 ± 0.116** | **−0.803** |
+
+The central finding is **not** that the model is a deployment-ready screening system. The analysis shows moderate structure within the curated record pool but poor transfer across publication sources.
+
+## Conventional-model benchmark
+
+The final revision compares the reference model against Ridge regression, Random Forest, HistGradientBoosting, and independent-target ExtraTrees using identical outer folds and train-only preprocessing.
+
+The proposed ExtraTrees + RegressorChain architecture was **not consistently superior**:
+
+- HistGradientBoosting with physics-motivated features achieved the best shuffled-CV Km score (**R² ≈ 0.381**).
+- Random Forest with the same representation achieved the best shuffled-CV kcat and Vmax scores (**R² ≈ 0.539** and **0.331**).
+- No benchmark model transferred robustly across publications for all three targets.
+
+This indicates that the main contribution is better understood as **representation + rigorous validation**, rather than a uniquely superior estimator architecture.
+
+## Feature-group ablation
+
+Keeping the estimator fixed while varying input representation showed that:
+
+- removing **all pH information** reduced shuffled-CV R² by about **0.194 (Km), 0.201 (kcat), and 0.249 (Vmax)**;
+- removing engineered temperature descriptors reduced **Km** R² by about **0.524**, with smaller effects on kcat and Vmax;
+- the two coarse material descriptors added little measurable predictive value;
+- pH- and temperature-related descriptors contain useful within-dataset signal, but these associations do **not** transfer robustly across publications.
+
+The physicochemical interpretation is intentionally narrow: these are **physics-motivated predictive descriptors**, not evidence that the model recovered transferable catalytic mechanisms or activation energetics.
 
 ## Repository structure
 
@@ -27,18 +80,22 @@ nanozyme-kinetics-piml/
 ├── requirements.txt
 ├── CITATION.cff
 ├── code/
-│   └── PIML_revision_grouped_oof.py
+│   ├── PIML_revision_grouped_oof.py
+│   └── PIML_round3_reviewer_analysis_FINAL_CLEAN.py
 ├── data/
 │   ├── Database_86_with_DOI.xlsx
 │   └── README.md
 ├── results/
-│   └── README.md
+│   ├── README.md
+│   └── final_round3/
 ├── figures/
 │   ├── Figure1_ParityPlots.pdf
 │   ├── Figure2_FeatureImportance.pdf
-│   └── Figure3_Residuals.pdf
+│   ├── Figure3_Residuals.pdf
+│   └── graphical_abstract_round3.png
 └── supplementary/
-    └── CV_tables_final_publication_ready.pdf
+    ├── CV_tables_final_publication_ready.pdf
+    └── Supporting_Information_Round3.pdf
 ```
 
 ## Reproducing the analysis
@@ -47,62 +104,37 @@ Python 3.10+ is recommended.
 
 ```bash
 python -m venv .venv
-```
-
-Activate the environment, then install dependencies:
-
-```bash
 pip install -r requirements.txt
 ```
 
-Run the full analysis from the repository root:
+Run the final Round 3 pipeline:
 
 ```bash
-python code/PIML_revision_grouped_oof.py \
-  --data data/Database_86_with_DOI.xlsx \
-  --sheet Matched_86 \
-  --out results/full_run
+python code/PIML_round3_reviewer_analysis_FINAL_CLEAN.py   --data data/Database_86_with_DOI.xlsx   --sheet Matched_86
 ```
 
-The script performs the fixed held-out analysis, leakage-controlled random 5-fold cross-validation, publication-aware `GroupKFold`, pooled OOF prediction export, M1–M4 and A0–A3 ablations, and the known-activity sensitivity analysis.
+Each Round 3 execution writes to a fresh timestamped output directory so older runs are not overwritten.
 
-### Reproducibility safeguards
+## Reproducibility safeguards
 
-The final pipeline keeps all data-dependent operations inside training partitions:
+All data-dependent operations are fitted inside training partitions:
 
-- target winsorization is fitted on training targets only;
 - validation/test targets remain unmodified;
-- imputation and scaling are fitted on training features only;
-- activity-specific Arrhenius scaling parameters are selected using training data only;
-- publication-aware validation prevents records from the same reconstructed publication group from appearing in both train and validation folds;
-- each OOF record is predicted exactly once, with an explicit integrity check.
+- target winsorization is train-only;
+- imputation and scaling are train-only;
+- Arrhenius-parameter selection is train-only;
+- grouped validation prevents any publication from appearing in both train and validation within an outer fold;
+- every OOF record is predicted exactly once by a model that did not train on that record;
+- reviewer comparisons use identical outer folds within each analysis.
 
-## Dataset
+## Main conclusion
 
-`data/Database_86_with_DOI.xlsx` contains the same **86 complete records** used in the manuscript, augmented with publication provenance for publication-aware validation. The final cohort contains **23 reconstructed publication groups**.
-
-See [`data/README.md`](data/README.md) for provenance, scope, and reuse notes.
-
-## Results
-
-The repository is intended to hold the frozen summary outputs from the final manuscript run. See [`results/README.md`](results/README.md) for the expected files and upload instructions.
-
-## Important interpretation note
-
-This repository does **not** present a deployment-ready virtual-screening model. Random CV should be interpreted as predictive utility within the curated literature dataset. Publication-grouped CV/OOF is the stricter estimate of cross-study transfer, and it shows substantial publication-level dependence.
-
-The Arrhenius term is retained as a **physics-motivated predictive descriptor**. The present data do not establish that it recovers independent temperature-dependent catalytic energetics.
-
-## License
-
-The **software/code** in this repository is released under the MIT License unless otherwise noted.
-
-The curated dataset is derived from NanozymeDB and source publications and is **not relicensed under MIT**. See `data/README.md` for provenance and attribution guidance.
+**Physics-motivated features capture useful within-dataset associations, but current sparse literature-derived nanozyme data do not support robust cross-publication kinetic prediction.**
 
 ## Citation
 
-GitHub can generate a citation from [`CITATION.cff`](CITATION.cff). Once the associated manuscript receives a DOI, this file can be updated with the final article citation.
+GitHub can generate a citation from [`CITATION.cff`](CITATION.cff). Once the associated journal article receives a DOI, the metadata can be updated with the final publication record.
 
 ## Contact
 
-Maintained by **NanoBioML** / Daniel Zhakupov.
+Maintained by **NanoBioML / Daniel Zhakupov**.
